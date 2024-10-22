@@ -1,4 +1,3 @@
-from transformers import T5ForConditionalGeneration, T5Tokenizer
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 import json
@@ -13,9 +12,6 @@ for section, qa_list in data.items():
         faq_data.append({"question": qa["question"], "answer": qa["answer"]})
 
 semantic_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
-
-t5_tokenizer = T5Tokenizer.from_pretrained('t5-large')
-t5_model = T5ForConditionalGeneration.from_pretrained('t5-large')
 
 faq_questions = [faq['question'] for faq in faq_data]
 
