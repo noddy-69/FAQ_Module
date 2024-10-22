@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot UI</title>
+    <link rel="stylesheet" href="../static/src/output.css">
+    <link rel="stylesheet" href="../static/src/styles.css">
+</head>
+<body class="bg-white">
+    
+    <div class="logo-container">
+        <img src="../static/src/logo.svg" alt="Logo" class="h-16 w-auto">
+    </div>
+
+    <div class="content-center">
+        <div class="faq-text">
+            FAQ Module
+        </div>
+    </div>
+
+    <div class="chatbot fixed bottom-[80px] right-[120px] w-[800px] h-[500px] bg-white shadow-lg rounded-lg border border-gray-300 flex flex-col">
+        <div class="chat-header flex justify-between items-center p-3 bg-[#e57549] text-white rounded-t-lg">
+            <h2 class="font-semibold">Chatbot</h2>
+            <button class="close-btn focus:outline-none">✖</button>
+        </div>
+        <div class="chat-messages flex-1 p-3 overflow-y-auto h-60">
+            <div class="bot mb-2 flex items-center"><div>🤖</div><div class="bg-green-100 p-2 rounded-lg message">Hello! How can I assist you today?</div></div>
+        </div>
+        
+        <div class="spinner hidden justify-center items-center p-3">
+            <div class="loader"></div>
+        </div>
+        
+        <div class="chat-input flex p-3 border-t border-gray-200">
+            <input type="text" id="user-input" placeholder="Type a message..." class="flex-1 p-2 border border-gray-300 rounded-lg" required/>
+            <button id="send-btn" class="ml-2 bg-[#e57549] text-white p-2 rounded-lg">Send</button>
+        </div>
+    </div>
+
+    <button class="chatbot-toggle">Chat</button>
+
+    <script src="../static/src/script.js"></script>
+
+</body>
+</html>
