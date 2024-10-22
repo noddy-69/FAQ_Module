@@ -11,7 +11,7 @@ When the user submits a question, it is first checked to ensure that the questio
 2.	**Processing the Query:**
 A loading spinner indicates that the system is processing the request. The user’s question is used to search the knowledge base for relevant answers. The knowledge base contains embeddings of questions extracted from a json file, enabling quick similarity searches.
 3.	**Finding Relevant Answers:** 
-The system retrieves the top question from the knowledge base that is most similar to the user’s question using L2 distance. The corresponding answer to that question is delivered and displayed to the yser.
+The system retrieves the top question from the knowledge base that is most similar to the user’s question using L2 distance. The corresponding answer to that question is delivered and displayed to the user.
 
 $$
 d(P, Q) = \sqrt{\sum_{i=1}^{n} (q_i - p_i)^2}
