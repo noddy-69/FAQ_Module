@@ -12,7 +12,7 @@ for section, qa_list in data.items():
         faq_data.append({"question": qa["question"], "answer": qa["answer"]})
 
 semantic_model = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/sentence-transformers/all-mpnet-base-v2",
+    model_name="sentence-transformers/all-mpnet-base-v2",
     model_kwargs={"local_files_only": True}
 )
 
