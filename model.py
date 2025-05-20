@@ -11,7 +11,10 @@ for section, qa_list in data.items():
     for qa in qa_list:
         faq_data.append({"question": qa["question"], "answer": qa["answer"]})
 
-semantic_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
+semantic_model = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/sentence-transformers/all-mpnet-base-v2",
+    model_kwargs={"local_files_only": True}
+)
 
 faq_questions = [faq['question'] for faq in faq_data]
 question_embeddings = semantic_model.embed_documents(faq_questions)
